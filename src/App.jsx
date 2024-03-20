@@ -122,13 +122,13 @@ function App() {
         <div className="bg-gray-100 rounded-lg shadow-2xl p-8">
           <div className="flex justify-between mb-4">
             <button
-              className="bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="text-black bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               onClick={handleClear}
             >
               <MdClear className="inline-block mr-2" /> Clear
             </button>
             <button
-              className="bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="text-black bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               onClick={handleLoad}
             >
               <FaPlus className="inline-block mr-2" /> Load Example
@@ -172,7 +172,7 @@ function App() {
                   }
                 />
                 <button
-                  className="mt-5 bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="mt-5 text-black bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   onClick={() => removeEducation(index)}
                 >
                   <BiTrash className="inline-block mr-2" /> Remove Education
@@ -180,7 +180,7 @@ function App() {
               </div>
             ))}
             <button
-              className="mt-5 bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="mt-5 text-black bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               onClick={addEducation}
             >
               <FaPlus className="inline-block mr-2" /> Add Education
@@ -223,7 +223,7 @@ function App() {
                 }
               />
               <button
-                className="mt-5 bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="mt-5 text-black bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 onClick={() => removeExperience(index)}
               >
                 <BiTrash className="inline-block mr-2" /> Remove Experience
@@ -231,56 +231,61 @@ function App() {
             </div>
           ))}
           <button
-            className="mt-5 bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="mt-5 text-black bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             onClick={addExperience}
           >
             <FaPlus className="inline-block mr-2" /> Add Experience
           </button>
         </div>
         <div className="bg-gray-100 rounded-lg shadow-2xl p-8 w-1/4">
-          <h1 className="text-3xl font-bold mb-4">CV Preview</h1>
+          <h1 className="text-3xl font-bold mb-4 text-gray-600">CV Preview</h1>
           <div className="text-lg">
             <div className="mb-6">
               <div className="flex items-baseline">
                 <FaUser className="mr-2" />
-                <h2 className="text-xl font-bold mb-3">About Me</h2>
+                <h2 className="text-xl font-bold mb-3 text-gray-600">
+                  About Me
+                </h2>
               </div>
               <div className="flex items-baseline">
                 <FaUser className="mr-2" />
                 <p>
-                  <span className="font-bold">Name:</span> {name}
+                  <span className="font-bold text-black">Name:</span> {name}
                 </p>
               </div>
               <div className="flex items-baseline">
                 <FaPhone className="mr-2" />
                 <p>
-                  <span className="font-bold">Phone:</span> {phone}
+                  <span className="font-bold text-black">Phone:</span> {phone}
                 </p>
               </div>
               <div className="flex items-baseline">
                 <FaEnvelope className="mr-2" />
                 <p>
-                  <span className="font-bold">Email:</span> {email}
+                  <span className="font-bold text-black">Email:</span> {email}
                 </p>
               </div>
             </div>
             <div className="mb-6">
               <div className="flex items-baseline">
                 <FaGraduationCap className="mr-2" />
-                <h2 className="text-xl font-bold mb-2">Education</h2>
+                <h2 className="text-xl font-bold mb-2 text-gray-600">
+                  Education
+                </h2>
               </div>
               {educations.map((education, index) => (
                 <div key={index} className="mb-2">
                   <p>
-                    <span className="font-bold">Institution:</span>{" "}
+                    <span className="font-bold text-black">Institution:</span>{" "}
                     {education.institution}
                   </p>
                   <p>
-                    <span className="font-bold">Degree:</span>{" "}
+                    <span className="font-bold text-black">Degree:</span>{" "}
                     {education.degree}
                   </p>
                   <p>
-                    <span className="font-bold">Date:</span> {education.date}
+                    <span className="font-bold text-black">Date:</span>{" "}
+                    {education.date}
                   </p>
                 </div>
               ))}
@@ -288,24 +293,27 @@ function App() {
             <div>
               <div className="flex items-baseline">
                 <FaBriefcase className="mr-2" />
-                <h2 className="text-xl font-bold mb-2">Experience</h2>
+                <h2 className="text-xl font-bold mb-2 text-gray-600">
+                  Experience
+                </h2>
               </div>
               {experiences.map((experience, index) => (
                 <div key={index} className="mb-2">
                   <p>
-                    <span className="font-bold">Company:</span>{" "}
+                    <span className="font-bold text-black">Company:</span>{" "}
                     {experience.company}
                   </p>
                   <p>
-                    <span className="font-bold">Position:</span>{" "}
+                    <span className="font-bold text-black">Position:</span>{" "}
                     {experience.position}
                   </p>
                   <p>
-                    <span className="font-bold">Description:</span>{" "}
+                    <span className="font-bold text-black">Description:</span>{" "}
                     {experience.description}
                   </p>
                   <p>
-                    <span className="font-bold">Date:</span> {experience.datew}
+                    <span className="font-bold text-black">Date:</span>{" "}
+                    {experience.datew}
                   </p>
                 </div>
               ))}
